@@ -31,6 +31,7 @@ const DefaultIcon = L.icon({
   shadowSize: [41, 41]
 });
 
+// Set default icon for all markers
 L.Marker.prototype.options.icon = DefaultIcon;
 
 // User location marker
