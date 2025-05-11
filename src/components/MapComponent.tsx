@@ -31,7 +31,6 @@ const DefaultIcon = L.icon({
 });
 
 interface MapComponentProps {
-  onSearch: (query: string) => void;
   searchQuery: string | null;
 }
 
@@ -85,7 +84,7 @@ const MapComponent: React.FC<MapComponentProps> = ({ searchQuery }) => {
     L.control.layers(baseLayers).addTo(map);
     
     // Add campus marker
-    const campusMarker = L.marker(DEFAULT_POSITION, { icon: DefaultIcon })
+    L.marker(DEFAULT_POSITION, { icon: DefaultIcon })
       .addTo(map)
       .bindPopup("<b>Batangas State University Balayan Campus</b>");
     
@@ -109,7 +108,7 @@ const MapComponent: React.FC<MapComponentProps> = ({ searchQuery }) => {
     return () => {
       map.remove();
     };
-  }, []);
+  }, [isPlacingBin]); // Added isPlacingBin to dependency array
   
   // Watch for location changes
   useEffect(() => {

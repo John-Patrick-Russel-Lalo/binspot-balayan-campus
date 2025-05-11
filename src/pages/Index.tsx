@@ -19,10 +19,7 @@ const Index = () => {
       
       <SearchBar onSearch={handleSearch} />
       
-      <MapComponent 
-        onSearch={handleSearch}
-        searchQuery={searchQuery}
-      />
+      <MapComponent searchQuery={searchQuery} />
       
       <footer className="mt-8 text-center text-xs text-gray-400">
         <p>© 2025 BSU Balayan Campus Map | Data from OpenStreetMap</p>
