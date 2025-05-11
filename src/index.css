@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +98,23 @@
 
   body {
     @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #2c3e50 20%, #000 100%);
+    font-family: Arial, sans-serif;
   }
+
+  .leaflet-container {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
