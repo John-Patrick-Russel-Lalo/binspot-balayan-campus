@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import SearchBar from '@/components/SearchBar';
-import MapComponent from '@/components/MapComponent';
+import { MapComponent } from '@/components/map';
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState<string | null>(null);
